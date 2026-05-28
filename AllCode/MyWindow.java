@@ -230,7 +230,7 @@ public class MyWindow extends JFrame {
         next.setPreferredSize(new Dimension(120, 40));
         next.setFont(new Font("Arial", Font.PLAIN, 18));
         next.setFocusPainted(false);
-        next.addActionListener(e -> {cardLayout.show(mainPanel, "MENU"); } );
+        next.addActionListener(e -> {cardLayout.show(mainPanel, "INFORMATION"); } );
         
         panel.add(box1);
         panel.add(p1);
@@ -250,7 +250,169 @@ public class MyWindow extends JFrame {
         JLabel title = new JLabel("Deatail Confirmation");
         panel.add(title);
         title.setFont(new Font("Arial", Font.BOLD, 18));
-        title.setBounds(200,100, 280, 60);
+        title.setBounds(200,40, 280, 60);
+        
+        JPanel Mainbox = new JPanel();
+        Mainbox.setBorder(BorderFactory.createCompoundBorder(
+        BorderFactory.createLineBorder(Color.GRAY, 2),
+        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        Mainbox.setBackground(Color.WHITE);
+        Mainbox.setBounds(75, 130, 425, 480);
+        Mainbox.setLayout(null);
+        
+        JLabel Label = new JLabel("Client's Information:");
+        Label.setFont(new Font("Arial", Font.BOLD, 15));
+        Label.setBounds(125,-5, 180, 60);
+        Mainbox.add(Label);
+
+        JPanel Subbox = new JPanel();
+        Subbox.setBorder(BorderFactory.createCompoundBorder(
+        BorderFactory.createLineBorder(Color.GRAY, 2),
+        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        Subbox.setBackground(Color.WHITE);
+        Subbox.setBounds(40, 60, 340, 140 );
+        Subbox.setLayout(null);
+        Mainbox.add(Subbox);
+        
+        JLabel clientLabel = new JLabel("Client's Name:");
+        clientLabel.setBounds(20, 20, 140, 30);
+        Subbox.add(clientLabel);
+        
+        JLabel dateLabel = new JLabel("Booking Date:");
+        dateLabel.setBounds(20, 60, 140, 30);
+        Subbox.add(dateLabel);
+        
+        JLabel ExtraLabel = new JLabel("Extra Hours:");
+        ExtraLabel.setBounds(20, 100, 140, 30);
+        Subbox.add(ExtraLabel);
+                
+        JPanel type1 = new JPanel();
+        type1.setBorder(BorderFactory.createCompoundBorder(
+        BorderFactory.createLineBorder(Color.GRAY, 2),
+        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        type1.setBackground(Color.WHITE);
+        type1.setBounds(150, 20, 150, 30);
+        Subbox.add(type1); 
+        
+        JPanel type2 = new JPanel();
+        type2.setBorder(BorderFactory.createCompoundBorder(
+        BorderFactory.createLineBorder(Color.GRAY, 2),
+        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        type2.setBackground(Color.WHITE);
+        type2.setBounds(150, 60, 150, 30);
+        Subbox.add(type2); 
+        
+        JPanel type3 = new JPanel();
+        type3.setBorder(BorderFactory.createCompoundBorder(
+        BorderFactory.createLineBorder(Color.GRAY, 2),
+        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        type3.setBackground(Color.WHITE);
+        type3.setBounds(150, 100, 150, 30);
+        Subbox.add(type3);        
+        
+        JPanel Subbox1 = new JPanel();
+        Subbox1.setBorder(BorderFactory.createCompoundBorder(
+        BorderFactory.createLineBorder(Color.GRAY, 2),
+        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        Subbox1.setBackground(Color.WHITE);
+        Subbox1.setBounds(40, 210, 340, 200);
+        Subbox1.setLayout(null);
+        Mainbox.add(Subbox1);
+        
+        JLabel Types = new JLabel("Subtypes:");
+        Types.setFont(new Font("Arial", Font.BOLD, 15));
+        Types.setBounds(15,-15, 180, 60);
+        Subbox1.add(Types);
+        
+        
+        JPanel sub1 = new JPanel();
+        sub1.setBorder(BorderFactory.createCompoundBorder(
+        BorderFactory.createLineBorder(Color.GRAY, 2),
+        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        sub1.setBackground(Color.WHITE);
+        sub1.setBounds(15, 30, 90, 120);
+        Subbox1.add(sub1);
+        
+        JLabel newborn = new JLabel("Newborn");
+        newborn.setBounds(15, 30, 140, 30);
+        sub1.add(newborn);
+
+        JPanel sub2 = new JPanel();
+        sub2.setBorder(BorderFactory.createCompoundBorder(
+        BorderFactory.createLineBorder(Color.GRAY, 2),
+        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        sub2.setBackground(Color.WHITE);
+        sub2.setBounds(115, 30, 90, 120);
+        Subbox1.add(sub2);        
+        
+        JLabel maternity = new JLabel("Maternity");
+        maternity.setBounds(10, 10, 140, 30);
+        sub2.add(maternity);
+        
+        JPanel sub3 = new JPanel();
+        sub3.setBorder(BorderFactory.createCompoundBorder(
+        BorderFactory.createLineBorder(Color.GRAY, 2),
+        BorderFactory.createEmptyBorder(10, 10, 10, 10)));
+        sub3.setBackground(Color.WHITE);
+        sub3.setBounds(230, 30, 90, 120);
+        Subbox1.add(sub3);
+        
+        JLabel funshoot = new JLabel("Funshoot");
+        funshoot.setBounds(10, 10, 140, 30);
+        sub3.add(funshoot);
+        
+        RoundedButton newb = new RoundedButton("Selected");
+        newb.setBounds(15,160, 80, 30);
+        newb.setBackground(new Color(0, 80, 0));
+        newb.setForeground(Color.WHITE);
+        newb.setPreferredSize(new Dimension(120, 40));
+        newb.setFont(new Font("Arial", Font.PLAIN, 10));
+        newb.setFocusPainted(false);
+        newb.addActionListener(e -> {cardLayout.show(mainPanel, "MENU"); } );
+        Subbox1.add(newb);
+        
+        RoundedButton mater = new RoundedButton("Selected");
+        mater.setBounds(115,160, 80, 30);
+        mater.setBackground(new Color(0, 80, 0));
+        mater.setForeground(Color.WHITE);
+        mater.setPreferredSize(new Dimension(120, 40));
+        mater.setFont(new Font("Arial", Font.PLAIN, 10));
+        mater.setFocusPainted(false);
+        mater.addActionListener(e -> {cardLayout.show(mainPanel, "MENU"); } );
+        Subbox1.add(mater);
+
+        RoundedButton fun = new RoundedButton("Selected");
+        fun.setBounds(230,160, 80, 30);
+        fun.setBackground(new Color(0, 80, 0));
+        fun.setForeground(Color.WHITE);
+        fun.setPreferredSize(new Dimension(120, 40));
+        fun.setFont(new Font("Arial", Font.PLAIN, 10));
+        fun.setFocusPainted(false);
+        fun.addActionListener(e -> {cardLayout.show(mainPanel, "MENU"); } );
+        Subbox1.add(fun);  
+        
+        RoundedButton back = new RoundedButton("Back");
+        back.setBounds(150,430, 70, 35);
+        back.setBackground(new Color(0, 80, 0));
+        back.setForeground(Color.WHITE);
+        back.setPreferredSize(new Dimension(120, 40));
+        back.setFont(new Font("Arial", Font.PLAIN, 15));
+        back.setFocusPainted(false);
+        back.addActionListener(e -> {cardLayout.show(mainPanel, "MENU"); } );
+        Mainbox.add(back);
+        
+        RoundedButton next = new RoundedButton("Next");
+        next.setBounds(300,430, 70, 35);
+        next.setBackground(new Color(0, 80, 0));
+        next.setForeground(Color.WHITE);
+        next.setPreferredSize(new Dimension(120, 40));
+        next.setFont(new Font("Arial", Font.PLAIN, 15));
+        next.setFocusPainted(false);
+        next.addActionListener(e -> {cardLayout.show(mainPanel, "INFORMATION"); } );
+        Mainbox.add(next);
+               
+                        
+        panel.add(Mainbox);
 
          return panel;
      }
