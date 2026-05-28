@@ -20,7 +20,9 @@ public class MyWindow extends JFrame {
         mainPanel.add(booking(), "BOOK");
         mainPanel.add(viewbook(), "VIEW");
         mainPanel.add(viewreciept(), "RECIEPT");
-
+        mainPanel.add(userInfo(), "INFORMATION");
+        
+        
         cardLayout.show(mainPanel, "HOME");
         setContentPane(mainPanel);
         setVisible(true);
@@ -140,21 +142,21 @@ public class MyWindow extends JFrame {
         BorderFactory.createLineBorder(Color.GRAY, 2),
         BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         box1.setBackground(Color.WHITE);
-        box1.setBounds(100, 140, 400, 80);
+        box1.setBounds(40, 140, 380, 80);
         
         JPanel box2 = new JPanel();
         box2.setBorder(BorderFactory.createCompoundBorder(
         BorderFactory.createLineBorder(Color.GRAY, 2),
         BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         box2.setBackground(Color.WHITE);
-        box2.setBounds(100, 240, 400, 80);
+        box2.setBounds(40, 240, 380, 80);
         
         JPanel box3 = new JPanel();
         box3.setBorder(BorderFactory.createCompoundBorder(
         BorderFactory.createLineBorder(Color.GRAY, 2),
         BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         box3.setBackground(Color.WHITE);
-        box3.setBounds(100, 340, 400, 80);
+        box3.setBounds(40, 340, 380, 80);
         
         JLabel Package1 = new JLabel("Package 1");
         Package1.setFont(new Font("Arial", Font.BOLD, 14));
@@ -166,6 +168,14 @@ public class MyWindow extends JFrame {
         box1.add(new JLabel("Time: 60 mins"));
         box1.add(new JLabel("Extension: +300/hr."));
         RoundedButton p1 = new RoundedButton("Select");
+        p1.setBounds(440,155, 120, 40);
+        p1.setBackground(new Color(0, 80, 0));
+        p1.setForeground(Color.WHITE);
+        p1.setPreferredSize(new Dimension(120, 40));
+        p1.setFont(new Font("Arial", Font.PLAIN, 18));
+        p1.setFocusPainted(false);
+        p1.addActionListener(e -> {cardLayout.show(mainPanel, "MENU"); } );
+        
         
         
         JLabel Package2 = new JLabel("Package 2");
@@ -178,6 +188,13 @@ public class MyWindow extends JFrame {
         box2.add(new JLabel("Time: 120 mins"));
         box2.add(new JLabel("Extension: +500/hr."));
         RoundedButton p2 = new RoundedButton("Select");
+        p2.setBounds(440,255, 120, 40);
+        p2.setBackground(new Color(0, 80, 0));
+        p2.setForeground(Color.WHITE);
+        p2.setPreferredSize(new Dimension(120, 40));
+        p2.setFont(new Font("Arial", Font.PLAIN, 18));
+        p2.setFocusPainted(false);
+        p2.addActionListener(e -> {cardLayout.show(mainPanel, "MENU"); } );
         
         JLabel Package3 = new JLabel("Package 3");
         Package3.setFont(new Font("Arial", Font.BOLD, 14));
@@ -189,6 +206,13 @@ public class MyWindow extends JFrame {
         box3.add(new JLabel("Time: 120 mins"));
         box3.add(new JLabel("Extension: +500/hr."));
         RoundedButton p3 = new RoundedButton("Select");
+        p3.setBounds(440,355, 120, 40);
+        p3.setBackground(new Color(0, 80, 0));
+        p3.setForeground(Color.WHITE);
+        p3.setPreferredSize(new Dimension(120, 40));
+        p3.setFont(new Font("Arial", Font.PLAIN, 18));
+        p3.setFocusPainted(false);
+        p3.addActionListener(e -> {cardLayout.show(mainPanel, "MENU"); } );
         
         RoundedButton back = new RoundedButton("Back");
         back.setBounds(105,500, 180, 60);
@@ -209,13 +233,27 @@ public class MyWindow extends JFrame {
         next.addActionListener(e -> {cardLayout.show(mainPanel, "MENU"); } );
         
         panel.add(box1);
+        panel.add(p1);
         panel.add(box2);
+        panel.add(p2);
         panel.add(box3);
+        panel.add(p3);
         panel.add(back);
         panel.add(next);
         
        return panel;   
    }
+   
+     private JPanel userInfo() {
+        JPanel panel = new JPanel(null);
+        
+        JLabel title = new JLabel("Deatail Confirmation");
+        panel.add(title);
+        title.setFont(new Font("Arial", Font.BOLD, 18));
+        title.setBounds(200,100, 280, 60);
+
+         return panel;
+     }
    
      private JPanel viewbook() {
         JPanel panel = new JPanel(null);
