@@ -86,6 +86,6 @@ public abstract class PhotoshootService {
         System.out.printf("  | %-15s : P%-23.2f|\n", "TOTAL",  calculateTotal(extraHours));
         System.out.printf("  | %-15s : %-24s|\n",    "Status", status);
         System.out.println("  +------------------------------------------+");
-        System.out.println();
+        System.out.println();   
     }
 }

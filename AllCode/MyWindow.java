@@ -7,6 +7,7 @@ public class MyWindow extends JFrame {
     CardLayout cardLayout = new CardLayout();
     JPanel mainPanel = new JPanel(cardLayout);
 
+    
     public MyWindow() {
     
         setTitle("Gerose's Window");
